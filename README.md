@@ -20,11 +20,12 @@ Going forward, you'll use ActiveRecord to create and retrieve data from your dat
 | SQL                                   | ActiveRecord          |
 |----					                       |-----                  |
 |SELECT * FROM cats;                    | Cat.all              |  
-|SELECT name FROM cats; 		           | Cat.all.name         | 
+|SELECT name FROM cats; 		           | Cat.pluck(:name)       | 
 |SELECT * FROM cats <br> WHERE name = "Maru";| Cat.where(name: 'Maru')|
 |SELECT * FROM cats <br> WHERE age > 2;      | Cat.where('age > 2')|
 |UPDATE cats SET name = "Hana" <br> WHERE name = "Hannah";| hannah = Cat.where(name: 'Hana') <br> hannah.name = "Hannah" |
 |DELETE * FROM cats <br> WHERE id = 3;        | Cat.destroy(3)|
 
 Notice how much cleaner and more straightforward ActiveRecord makes interacting with the database - you'll learn more about CRUD methods in ActiveRecord later in this unit.
+
 
