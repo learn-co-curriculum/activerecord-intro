@@ -22,6 +22,6 @@ ActiveRecord is also responsible for handling all database interaction from the 
 |SELECT name FROM cats; 		           | Cat.all.name         | 
 |SELECT * FROM cats WHERE name = "Maru";| Cat.where(name: 'Maru')|
 |SELECT * FROM cats WHERE age > 2;      | Cat.where('age > 2')|
-|UPDATE cats SET name = "Hana" WHERE name = "Hannah";| hannah = Cat.where(name: 'Hana') cat.name = "Hannah" |
+|UPDATE cats SET name = "Hana" WHERE name = "Hannah";| hannah = Cat.where(name: 'Hana') <br> hannah.name = "Hannah" |
 |DELETE * FROM cats WHERE id = 3        | Cat.destroy(3)|
 
