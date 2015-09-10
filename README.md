@@ -14,18 +14,28 @@ Essentially, ActiveRecord is a wrapper written in Ruby that allows us to interac
 Going forward, you'll use ActiveRecord to create and retrieve data from your database, and use traditional Ruby methods and attribute assignments to interact with this data. Instead of composing a SQL query manually, filling in the search parameters, sending it off to a database API, running the query, examining and parsing the result and storing the result in either a hash or a database, you let ActiveRecord do all that for you by writing simple Ruby code.
 
 
+## Advanced: Understanding ORMs
+
+What do we mean when we say an ORM maps a database row to a Ruby object? In an ORM, classes are mapped to tables and instances of classes are table rows. In other words, if you application has a Car class that produces car objects, your database would have a Cars table, each row in which represents an instance of that class that has been created.
+
+The data stored in each table row isn't the Ruby object itself, but a representation of that object. When we instantiate a new instance of the Car class, we've done nothing more than create an instance of that class. When we use Active Record's #save method on that car instance (more on that later), your program is collecting the attributes or characteristics of that individual car and storing them in a row in the Cars table as raw data. Later, when you want to retrieve that individual car from your database, Active Record will go into the database, find the appropriate row and use the raw data there to re-create or initialize again an instance of the Car class with the appropriate data.
+
+Think of it like playing with Legos. Let's say we have a Lego set for making a toy car. One day, we might assemble the Legos, as per the instructions, into a car. Then, we might put our toys away and disassemble the toy car, placing the individual Legos that make it up back into their box. The next day, when we're ready to play Legos again, we can go into the toy box (our database) and retrieve the Legos (our raw data) and re-assemble them into our toy car (our Ruby object).
+
+Moving forward, Active Record will assist in all of these interactions. We won't really need to understand how it works, just that Active Record provides us method for connecting to the database, saving the data that represents Ruby objects, retrieving specific data sets and using them to re-create those objects.
+
 
 ## ActiveRecord vs SQL 
 
-| SQL                                   | ActiveRecord          |
-|----					                       |-----                  |
-|SELECT * FROM cats;                    | Cat.all              |  
-|SELECT name FROM cats; 		           | Cat.pluck(:name)       | 
+| SQL | ActiveRecord |
+|----	|----- |
+|SELECT * FROM cats;| Cat.all|  
+|SELECT name FROM cats;| Cat.pluck(:name)| 
 |SELECT * FROM cats <br> WHERE name = "Maru";| Cat.where(name: 'Maru')|
-|SELECT * FROM cats <br> WHERE age > 2;      | Cat.where('age > 2')|
+|SELECT * FROM cats <br> WHERE age > 2;| Cat.where('age > 2')|
 |UPDATE cats SET name = "Hana" <br> WHERE name = "Hannah";| hannah = Cat.where(name: 'Hana') <br> hannah.name = "Hannah" |
-|DELETE * FROM cats <br> WHERE id = 3;        | Cat.destroy(3)|
+|DELETE * FROM cats <br> WHERE id = 3;| Cat.destroy(3)|
 
-Notice how much cleaner and more straightforward ActiveRecord makes interacting with the database - you'll learn more about CRUD methods in ActiveRecord later in this unit.
+Notice how much cleaner and more straightforward ActiveRecord makes interacting with the database compared to SQL - you'll learn more about CRUD methods in ActiveRecord later in this unit.
 
 
