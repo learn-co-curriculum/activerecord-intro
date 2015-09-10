@@ -1,11 +1,11 @@
-# What is ActiveRecord ?
+# What is ActiveRecord?
 
 ## Objectives
 
 1. Define ActiveRecord and understand why it is easier to use.
 2. Compare ActiveRecord vs. SQL queries.
 
-## ActiveRecord
+## What is ActiveRecord?
 
 ActiveRecord is what is referred to as an Object-Relational Mapping (ORM). It's responsible for mapping exactly one row in a database to one object in Ruby. 
 
