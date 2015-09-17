@@ -16,13 +16,13 @@ Going forward, you'll use ActiveRecord to create and retrieve data from your dat
 
 ## Advanced: Understanding ORMs
 
-What do we mean when we say an ORM maps a database row to a Ruby object? In an ORM, classes are mapped to tables and instances of classes are table rows. In other words, if you application has a Car class that produces car objects, your database would have a Cars table, each row in which represents an instance of that class that has been created.
+What do we mean when we say an ORM maps a database row to a Ruby object? In an ORM, classes are mapped to tables and instances of classes are table rows. In other words, if your application has a `Car` class that produces car objects, your database would have a 'Cars' table, where each row  represents an instance of the class in question.
 
-The data stored in each table row isn't the Ruby object itself, but a representation of that object. When we instantiate a new instance of the Car class, we've done nothing more than create an instance of that class. When we use Active Record's #save method on that car instance (more on that later), your program is collecting the attributes or characteristics of that individual car and storing them in a row in the Cars table as raw data. Later, when you want to retrieve that individual car from your database, Active Record will go into the database, find the appropriate row and use the raw data there to re-create or initialize again an instance of the Car class with the appropriate data.
+The data stored in each table row isn't the Ruby object itself, but a representation of that object. When we instantiate a new instance of the Car class, we've done nothing more than create an instance of that class. When we use Active Record's #save method on that Car instance (more on that later), your program is collecting the attributes or characteristics of that individual car and storing them in a row in the Cars table as raw data. Later, when you want to retrieve that individual car from your database, ActiveRecord will go into the database, find the appropriate row and use the raw data there to re-create (or initialize again) an instance of the Car class with the appropriate data.
 
 Think of it like playing with Legos. Let's say we have a Lego set for making a toy car. One day, we might assemble the Legos, as per the instructions, into a car. Then, we might put our toys away and disassemble the toy car, placing the individual Legos that make it up back into their box. The next day, when we're ready to play Legos again, we can go into the toy box (our database) and retrieve the Legos (our raw data) and re-assemble them into our toy car (our Ruby object).
 
-Moving forward, Active Record will assist in all of these interactions. We won't really need to understand how it works, just that Active Record provides us method for connecting to the database, saving the data that represents Ruby objects, retrieving specific data sets and using them to re-create those objects.
+Moving forward, Active Record will assist in all of these interactions. We won't really need to understand how it works, just that Active Record provides us with a way of connecting to the database, saving the data that represents Ruby objects, retrieving specific data sets, and using them to re-create those objects.
 
 
 ## ActiveRecord vs SQL 
