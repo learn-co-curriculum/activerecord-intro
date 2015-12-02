@@ -39,3 +39,5 @@ Moving forward, Active Record will assist in all of these interactions. We won't
 Notice how much cleaner and more straightforward ActiveRecord makes interacting with the database compared to SQL - you'll learn more about CRUD methods in ActiveRecord later in this unit.
 
 
+
+<a href='https://learn.co/lessons/activerecord-intro' data-visibility='hidden'>View this lesson on Learn.co</a>
