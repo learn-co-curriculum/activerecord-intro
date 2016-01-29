@@ -40,4 +40,4 @@ Notice how much cleaner and more straightforward ActiveRecord makes interacting 
 
 
 
-<a href='https://learn.co/lessons/activerecord-intro' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/activerecord-intro' title='What is ActiveRecord?'>What is ActiveRecord?</a> on Learn.co and start learning to code for free.</p>
